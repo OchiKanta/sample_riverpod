@@ -1,22 +1,29 @@
 import 'package:sample_riverpod/index.dart';
 
 class IntakeSubstance {
-  final Float okooto;
-  final Float polia;
-  final Float termeri;
+  final double nicotine;
+  final double tar;
+  final double ammonia;
 
   IntakeSubstance({
-    this.okooto,
-    this.polia,
-    this.termeri,
+    this.nicotine,
+    this.tar,
+    this.ammonia,
   });
 
   factory IntakeSubstance.fromJson(dynamic data) {
+    if (data == null) {
+      return IntakeSubstance(
+        nicotine: 0,
+        tar: 0,
+        ammonia: 0,
+      );
+    }
     final dataDecoded = json.decode(data) as Map<String, dynamic> ?? {};
     return IntakeSubstance(
-      okooto: dataDecoded['okooto'] as Float ?? null,
-      polia: dataDecoded['polia'] as Float ?? null,
-      termeri: dataDecoded['termeri'] as Float ?? null,
+      nicotine: dataDecoded['nicotine'] as double ?? 0,
+      tar: dataDecoded['tar'] as double ?? 0,
+      ammonia: dataDecoded['ammonia'] as double ?? 0,
     );
   }
 }

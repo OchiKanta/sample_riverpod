@@ -1,7 +1,13 @@
 import 'package:hooks_riverpod/all.dart';
-import 'package:sample_riverpod/data_source/intake_substance_data_source.dart';
 import 'package:sample_riverpod/index.dart';
-import 'package:sample_riverpod/provider/intake_substance_datasource_provider.dart';
+
+enum CigaretteType {
+  frontierLight,
+  marlboroMentholLight,
+  cabinMild,
+  mildSeven,
+  sevenStar
+}
 
 final homeScreenNotificationProvider = ChangeNotifierProvider((ref) =>
     HomeScreenViewModel(
@@ -10,9 +16,8 @@ final homeScreenNotificationProvider = ChangeNotifierProvider((ref) =>
 class HomeScreenViewModel extends ChangeNotifier {
   HomeScreenViewModel({
     @required IntakeSubstanceDataSource dataSource,
-  }) : _dataSource = dataSource {
-    // _firstLoadIntakeSubstance();
-  }
+  }) : _dataSource = dataSource;
+
   final IntakeSubstanceDataSource _dataSource;
 
   CigaretteType _cigaretteType;

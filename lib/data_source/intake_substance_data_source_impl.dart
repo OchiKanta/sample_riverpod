@@ -13,8 +13,9 @@ class IntakeSubstanceDataSourceImpl extends IntakeSubstanceDataSource {
   @override
   Future<CigaretteType> loadCurrentCigarette() async {
     final prefs = await _preference.getInstance();
-    final cigaretteName = prefs.getString('currentCigarette') ?? 'frontierLight';
-    return getCigaretteType(cigaretteName);
+    final cigaretteName =
+        prefs.getString('currentCigarette') ?? 'frontierLight';
+    return CigaretteStringHelper.getCigaretteType(cigaretteName);
   }
 
   @override
@@ -46,7 +47,7 @@ class IntakeSubstanceDataSourceImpl extends IntakeSubstanceDataSource {
     final prefs = await _preference.getInstance();
     return prefs.setString(
       'currentCigarette',
-      cigaretteType.toString(),
+      CigaretteStringHelper.getCigaretteString(cigaretteType),
     );
   }
 

@@ -51,4 +51,9 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/white_smoking_icon.png
+    - assets/images/frontier_light_icon.png
+    - assets/images/marlboro_menthol_light_icon.png
+    - assets/images/mild_seven_icon.png
+    - assets/images/seven_star_icon.png
+    - assets/images/cabin_mild_icon.png
 

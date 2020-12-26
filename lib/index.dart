@@ -27,7 +27,9 @@ export 'package:sample_riverpod/provider/config_provider.dart';
 
 // Model
 export 'package:sample_riverpod/model/intake_substance.dart';
-export 'package:sample_riverpod/model/cigarette.dart';
+
+// Utility
+export 'package:sample_riverpod/utilities/cigarette_string_helper.dart';
 
 // Service
 export 'package:sample_riverpod/services/preference/preference.dart';
@@ -36,3 +38,4 @@ export 'package:sample_riverpod/services/config/config.dart';
 // Widgets
 export 'package:sample_riverpod/widgets/home/home_screen.dart';
 export 'package:sample_riverpod/widgets/home/home_screen_view_model.dart';
+export 'package:sample_riverpod/widgets/home/cigarette_list/cigarette_list.dart';

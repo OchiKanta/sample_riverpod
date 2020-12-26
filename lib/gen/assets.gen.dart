@@ -8,6 +8,16 @@ import 'package:flutter/widgets.dart';
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  AssetGenImage get cabinMildIcon =>
+      const AssetGenImage('assets/images/cabin_mild_icon.png');
+  AssetGenImage get frontierLightIcon =>
+      const AssetGenImage('assets/images/frontier_light_icon.png');
+  AssetGenImage get marlboroMentholLightIcon =>
+      const AssetGenImage('assets/images/marlboro_menthol_light_icon.png');
+  AssetGenImage get mildSevenIcon =>
+      const AssetGenImage('assets/images/mild_seven_icon.png');
+  AssetGenImage get sevenStarIcon =>
+      const AssetGenImage('assets/images/seven_star_icon.png');
   AssetGenImage get whiteSmokingIcon =>
       const AssetGenImage('assets/images/white_smoking_icon.png');
 }
